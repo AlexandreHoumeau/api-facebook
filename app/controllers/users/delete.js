@@ -1,4 +1,6 @@
 const User = require('../../models/users.js')
+const JWT = require('../../jwt.js')
+const jwt = new JWT()
 /**
  * Create
  * @class
@@ -13,7 +15,7 @@ class Delete {
    * middleware
    */
   middleware () {
-    this.app.delete('/user/delete/:id', (req, res) => {
+    this.app.delete('/user/delete/:id', jwt.express(), (req, res) => {
       try {
         const { id } = req.params
         this.UserModel.findByIdAndDelete(id).then(user => {

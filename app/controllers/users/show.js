@@ -17,7 +17,7 @@ class Show {
    * middleware
    */
   middleware () {
-    this.app.get('/user/:token/show/:id', (req, res) => {
+    this.app.get('/user/show/:id', jwt.express(), (req, res) => {
       const { id, token } = req.params
 
       if (jwt.getToken(token)) {
