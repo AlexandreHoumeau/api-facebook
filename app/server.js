@@ -78,7 +78,7 @@ class Server {
 
     // Discussion_group
     new routes.discussion_groups.CreateDiscussion(this.app, this.connect)
-    // new routes.discussion_groups.ShowDiscussion(this.app, this.connect)
+    new routes.discussion_groups.ShowDiscussion(this.app, this.connect)
     new routes.discussion_groups.DeleteDiscussion(this.app, this.connect)
     // new routes.discussion_groups.UpdateDiscussion(this.app, this.connect)
     // new routes.discussion_groups.CreateDiscussionMessage(this.app, this.connect)
