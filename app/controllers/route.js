@@ -16,6 +16,13 @@ const ShowGroups = require('./groups/show.js')
 const DeleteGroups = require('./groups/delete.js')
 const UpdateGroups = require('./groups/update.js')
 
+// Discussion_group
+const CreateDiscussion = require('./discussion_groups/create')
+const ShowDiscussion = require('./discussion_groups/show.js')
+const DeleteDiscussion = require('./discussion_groups/delete.js')
+const UpdateDiscussion = require('./discussion_groups/update.js')
+const CreateDiscussionMessage = require('./discussion_groups/createMessage')
+
 module.exports = {
   users: {
     Create,
@@ -34,5 +41,12 @@ module.exports = {
     ShowGroups, 
     DeleteGroups,
     UpdateGroups
+  },
+  discussion_groups: {
+    CreateDiscussion,
+    ShowDiscussion,
+    DeleteDiscussion,
+    UpdateDiscussion,
+    CreateDiscussionMessage
   }
 }
