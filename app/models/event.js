@@ -1,6 +1,4 @@
 const mongoose = require('mongoose')
-// const JWT = require('../jwt')
-// const jwt = new JWT()
 
 const Schema = new mongoose.Schema({
   title: {
@@ -19,11 +17,12 @@ const Schema = new mongoose.Schema({
   location: String,
   cover_photo: String,
   public: Boolean,
-  id_admin: {
-    type: Object,
+  admin: {
+    type: [],
     require: true
   },
-  particpants: Object
+  participants: Object,
+  created_at: { type: Date, default: Date.now }
 }, {
   collection: 'events', 
   minimize: false, 
@@ -44,7 +43,7 @@ Schema.methods.generateAdmin = async function (tk, userModel) {
     }
     return collection
   })
-  event.id_admin = user._doc._id
+  event.admin = user._doc._id
   await event.save()
   return event
 }
