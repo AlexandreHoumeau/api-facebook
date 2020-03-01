@@ -67,7 +67,7 @@ class Server {
     // Events
     new routes.events.CreateEvents(this.app, this.connect)
     new routes.events.ShowEvents(this.app, this.connect)
-    // new routes.events.UpdateEvents(this.app, this.connect)
+    new routes.events.UpdateEvents(this.app, this.connect)
     new routes.events.DeleteEvents(this.app, this.connect)
 
     this.app.use((req, res) => {
