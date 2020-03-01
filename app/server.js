@@ -70,6 +70,12 @@ class Server {
     new routes.events.UpdateEvents(this.app, this.connect)
     new routes.events.DeleteEvents(this.app, this.connect)
 
+    // Groups
+    new routes.groups.CreateGroups(this.app, this.connect)
+    new routes.groups.ShowGroups(this.app, this.connect)
+    new routes.groups.UpdateGroups(this.app, this.connect)
+    new routes.groups.DeleteGroups(this.app, this.connect)
+
     this.app.use((req, res) => {
       res.status(404).json({
         'code': 404,
