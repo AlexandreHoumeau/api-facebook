@@ -515,7 +515,7 @@ Show a single Discussion group by ID.
     admin:['12483hdhd2838'],
     group: 'skdjlkj5425424sdsqd',
     public: false,
-    users: [12483hdhd2838],
+    users: ['12483hdhd2838'],
     created_at: Date.now
 }
 ```
@@ -570,7 +570,7 @@ Update a single event by ID.
     admin:'['sf4546sdf54654', 'sdf53s4d3546s4df3', 'dsf5s43df54sdf']'
     group: 'skdjlkj5425424sdsqd',
     public: false,
-    users: [12483hdhd2838],
+    users: ['12483hdhd2838'],
     created_at: Date.now
 }
 ```
@@ -612,7 +612,7 @@ Delete a single discussion group by ID.
     admin:'['sf4546sdf54654', 'sdf53s4d3546s4df3', 'dsf5s43df54sdf']'
     group: 'skdjlkj5425424sdsqd',
     public: false,
-    users: [12483hdhd2838],
+    users: ['12483hdhd2838'],
     created_at: Date.now
 }
 ```
