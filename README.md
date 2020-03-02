@@ -442,3 +442,179 @@ Delete a single group by ID.
 }
 ```
 
+## Discussion groups api
+Crud API for all Discussion Groups 
+#### [POST] Create Discussion groups 
+Allows the creation of a single Discussion group.
+|User|Api|
+|---|---|
+|Require autenthification |Yes|
+|Who can use it |User only|
+|Response formats |Application/JSON|
+
+- HTTP request : POST -> discussion/create
+#### Parameters
+    token: 'Y9Y1lusRUNVfKnv75yFUXw4wpo1OwK0HYd0RSVEkaaNCvz6oLNTT49m2Mix9sFHLwxeYWPUsgXxdhQYS80MgEE9Sljuq9VctHvdm'
+```javascript
+{
+    'name': 'Discussion_Group_2020', // require
+    'messages': [
+        user: '12483hdhd2838', // ObjectId
+        message: 'Hello World !'
+    ], // optionnal
+    'group': 'skdjlkj5425424sdsqd', // optional // ObjectId
+    'public': false, // optionnal
+    'users': [12483hdhd2838], // optionnal
+    'created_at': Date.now // automatic
+}
+```
+
+#### Response
+``` javascript
+{
+    id: 'qskq554qsd6q5s4d6fd7gd'
+    name: 'Discussion_Group_2020',
+    messages: [{
+        user: '12483hdhd2838',
+        content: 'Hello World !',
+        created_at: Date.now
+    }],
+    admin:['12483hdhd2838'], // automatic when creating -> take the user token to find user in db
+    group: 'skdjlkj5425424sdsqd',
+    public: false,
+    users: [12483hdhd2838],
+    created_at: Date.now
+}
+```
+---
+#### [GET] Show Discussion group 
+Show a single Discussion group by ID.
+|User|Api|
+|---|---|
+|Require autenthification |Yes|
+|Who can use it |User only|
+|Response formats |Application/JSON|
+
+- HTTP request : GET -> discussion/show/:id
+- Header request: token: Valid user token
+ 
+#### Parameters
+    discussion/show/qskq554qsd6q5s4d6fd7gd
+    token: 'Y9Y1lusRUNVfKnv75yFUXw4wpo1OwK0HYd0RSVEkaaNCvz6oLNTT49m2Mix9sFHLwxeYWPUsgXxdhQYS80MgEE9Sljuq9VctHvdm'
+
+#### Response
+``` javascript
+{
+    id: 'qskq554qsd6q5s4d6fd7gd'
+    name: 'Discussion_Group_2020',
+    messages: [{
+        user: '12483hdhd2838',
+        content: 'Hello World !',
+        created_at: Date.now
+    }],
+    admin:['12483hdhd2838'],
+    group: 'skdjlkj5425424sdsqd',
+    public: false,
+    users: [12483hdhd2838],
+    created_at: Date.now
+}
+```
+
+---
+#### [Update] update Discussion Group 
+Update a single event by ID.
+|User|Api|
+|---|---|
+|Require autenthification |Yes|
+|Who can use it |User only|
+|Response formats |Application/JSON|
+
+- HTTP request : PUT -> discussion/update/:id
+- Header request: token: Valid user token
+ 
+#### Parameters
+    discussion/update/qskq554qsd6q5s4d6fd7gd
+    token: 'Y9Y1lusRUNVfKnv75yFUXw4wpo1OwK0HYd0RSVEkaaNCvz6oLNTT49m2Mix9sFHLwxeYWPUsgXxdhQYS80MgEE9Sljuq9VctHvdm'
+```javascript
+{
+    admin: '['sf4546sdf54654', 'sdf53s4d3546s4df3', 'dsf5s43df54sdf']'
+    message: [{
+        user: '12483hdhd2838',
+        content: 'Hello World twice!',
+        created_at: Date.now
+    },{
+        user: 'sdf53s4d3546s4df3',
+        content: 'Ok Stop !!'
+        created_at: Date.now
+    }]
+}
+```
+#### Response
+``` javascript
+{
+    id: 'qskq554qsd6q5s4d6fd7gd'
+    name: 'Discussion_Group_2020',
+    messages: [{
+        user: '12483hdhd2838',
+        content: 'Hello World !',
+        created_at: Date.now
+    },{
+        user: '12483hdhd2838',
+        content: 'Hello World twice!',
+        created_at: Date.now
+    },{
+        user: 'sdf53s4d3546s4df3',
+        content: 'Ok Stop !!'
+        created_at: Date.now
+    }],
+    admin:'['sf4546sdf54654', 'sdf53s4d3546s4df3', 'dsf5s43df54sdf']'
+    group: 'skdjlkj5425424sdsqd',
+    public: false,
+    users: [12483hdhd2838],
+    created_at: Date.now
+}
+```
+
+---
+#### [Delete] Delete discussion group 
+Delete a single discussion group by ID.
+|User|Api|
+|---|---|
+|Require autenthification |Yes|
+|Who can use it |User only|
+|Response formats |Application/JSON|
+
+- HTTP request : DELETE -> discussion/delete/:id
+- Header request: token: Valid user token
+ 
+#### Parameters
+    discussion/delete/qskq554qsd6q5s4d6fd7gd
+    token: 'Y9Y1lusRUNVfKnv75yFUXw4wpo1OwK0HYd0RSVEkaaNCvz6oLNTT49m2Mix9sFHLwxeYWPUsgXxdhQYS80MgEE9Sljuq9VctHvdm'
+
+#### Response
+``` javascript
+{
+    id: 'qskq554qsd6q5s4d6fd7gd'
+    name: 'Discussion_Group_2020',
+    messages: [{
+        user: '12483hdhd2838',
+        content: 'Hello World !',
+        created_at: Date.now
+    },{
+        user: '12483hdhd2838',
+        content: 'Hello World twice!',
+        created_at: Date.now
+    },{
+        user: 'sdf53s4d3546s4df3',
+        content: 'Ok Stop !!'
+        created_at: Date.now
+    }],
+    admin:'['sf4546sdf54654', 'sdf53s4d3546s4df3', 'dsf5s43df54sdf']'
+    group: 'skdjlkj5425424sdsqd',
+    public: false,
+    users: [12483hdhd2838],
+    created_at: Date.now
+}
+```
+
+
