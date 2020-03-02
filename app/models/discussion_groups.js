@@ -18,7 +18,9 @@ const DiscussionSchema = new mongoose.Schema({
     type: [],
     require: true
   },
-  users: [Object],
+  users: {
+    type: []
+  },
   created_at: { type: Date, default: Date.now }
 }, {
   collection: 'discussion_group',
