@@ -10,7 +10,7 @@ Then start the app
     $npm run start
     
 You should also use ```postman``` for the request
-## User api
+# User api
 Crud API for all users
 #### [POST] Create user 
 Allows the creation of a single user.
@@ -187,7 +187,7 @@ Delete a single user by ID.
 ```
 
 
-## Event api
+# Event api
 Crud API for all Events
 #### [POST] Create event 
 Allows the creation of a single event.
@@ -322,7 +322,7 @@ Delete a single event by ID.
     'created_at': Date.now 
 }
 ```
-## Group api
+# Group api
 Crud API for all Groups
 #### [POST] Create group 
 Allows the creation of a single group.
@@ -453,7 +453,7 @@ Delete a single group by ID.
 }
 ```
 
-## Discussion groups api
+# Discussion groups api
 Crud API for all Discussion Groups 
 #### [POST] Create Discussion groups 
 Allows the creation of a single Discussion group.
