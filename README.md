@@ -174,3 +174,140 @@ Delete a single user by ID.
   'image_profil': 'https://www.mediacritik.com/wp-content/uploads/2019/04/rs_1024x759-170407142939-1024.Peter-Dinklage-Game-of-Thrones.kg_.040717.jpg'
 }
 ```
+
+
+## Event api
+Crud API for all Events
+#### [POST] Create event 
+Allows the creation of a single event.
+|User|Api|
+|---|---|
+|Require autenthification |Yes|
+|Who can use it |User only|
+|Response formats |Application/JSON|
+
+- HTTP request : POST -> event/create
+#### Parameters
+    token: 'Y9Y1lusRUNVfKnv75yFUXw4wpo1OwK0HYd0RSVEkaaNCvz6oLNTT49m2Mix9sFHLwxeYWPUsgXxdhQYS80MgEE9Sljuq9VctHvdm'
+```javascript
+{
+    'title': 'Event_name_2020', // require
+    'description': 'Super event for 2020', // optionnal
+    'location': 'The Event place', // required
+    'cover_photo': 'http://event-photo.jpeg', // required
+    'public': false, // optionnal
+    'participants': 12483hdhd2838, // optionnal
+    'created_at': Date.now // automatic
+}
+```
+
+#### Response
+``` javascript
+{
+    'id': 'kdjs65qkjd76shdg9'
+    'title': 'Event_name_2020',
+    'description': 'Super event for 2020',
+    'location': 'The Event place',
+    'cover_photo': 'http://event-photo.jpeg',
+    'public': false, 
+    'admin': '12483hdhd2838' // automatic when creating -> take the user token to find user in db
+    'participants': 12483hdhd2838, 
+    'created_at': Date.now 
+}
+```
+---
+#### [GET] Show event 
+Show a single event by ID.
+|User|Api|
+|---|---|
+|Require autenthification |Yes|
+|Who can use it |User only|
+|Response formats |Application/JSON|
+
+- HTTP request : GET -> user/event/:id
+- Header request: token: Valid user token
+ 
+#### Parameters
+    user/event/kdjs65qkjd76shdg9
+    token: 'Y9Y1lusRUNVfKnv75yFUXw4wpo1OwK0HYd0RSVEkaaNCvz6oLNTT49m2Mix9sFHLwxeYWPUsgXxdhQYS80MgEE9Sljuq9VctHvdm'
+
+#### Response
+``` javascript
+{
+    'id': 'kdjs65qkjd76shdg9'
+    'title': 'Event_name_2020',
+    'description': 'Super event for 2020', 
+    'location': 'The Event place', // required
+    'cover_photo': 'http://event-photo.jpeg',
+    'public': false, 
+    'admin': '12483hdhd2838' 
+    'participants': 12483hdhd2838, 
+    'created_at': Date.now 
+}
+```
+
+---
+#### [Update] update event 
+Update a single event by ID.
+|User|Api|
+|---|---|
+|Require autenthification |Yes|
+|Who can use it |User only|
+|Response formats |Application/JSON|
+
+- HTTP request : PUT -> user/update/:id
+- Header request: token: Valid user token
+ 
+#### Parameters
+    event/update/kdjs65qkjd76shdg9
+    token: 'Y9Y1lusRUNVfKnv75yFUXw4wpo1OwK0HYd0RSVEkaaNCvz6oLNTT49m2Mix9sFHLwxeYWPUsgXxdhQYS80MgEE9Sljuq9VctHvdm'
+```javascript
+{
+    'admin': '['sf4546sdf54654', 'sdf53s4d3546s4df3', 'dsf5s43df54sdf']'
+}
+```
+#### Response
+``` javascript
+{
+    'id': 'kdjs65qkjd76shdg9'
+    'title': 'Event_name_2020', 
+    'description': 'Super event for 2020', 
+    'location': 'The Event place',
+    'cover_photo': 'http://event-photo.jpeg',
+    'public': false,
+    'admin': ['12483hdhd2838', 'sf4546sdf54654', 'sdf53s4d3546s4df3', 'dsf5s43df54sdf'] 
+    'participants': 12483hdhd2838,
+    'created_at': Date.now 
+}
+```
+
+---
+#### [Delete] Delete event 
+Delete a single event by ID.
+|User|Api|
+|---|---|
+|Require autenthification |Yes|
+|Who can use it |User only|
+|Response formats |Application/JSON|
+
+- HTTP request : DELETE -> event/delete/:id
+- Header request: token: Valid user token
+ 
+#### Parameters
+    event/show/kdjs65qkjd76shdg9
+    token: 'Y9Y1lusRUNVfKnv75yFUXw4wpo1OwK0HYd0RSVEkaaNCvz6oLNTT49m2Mix9sFHLwxeYWPUsgXxdhQYS80MgEE9Sljuq9VctHvdm'
+
+#### Response
+``` javascript
+{
+    'id': 'kdjs65qkjd76shdg9'
+    'title': 'Event_name_2020', 
+    'description': 'Super event for 2020', 
+    'location': 'The Event place',
+    'cover_photo': 'http://event-photo.jpeg',
+    'public': false,
+    'admin': ['12483hdhd2838', 'sf4546sdf54654', 'sdf53s4d3546s4df3', 'dsf5s43df54sdf'] 
+    'participants': 12483hdhd2838,
+    'created_at': Date.now 
+}
+```
