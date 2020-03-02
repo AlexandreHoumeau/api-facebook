@@ -464,7 +464,7 @@ Allows the creation of a single Discussion group.
     ], // optionnal
     'group': 'skdjlkj5425424sdsqd', // optional // ObjectId
     'public': false, // optionnal
-    'users': [12483hdhd2838], // optionnal
+    'users': ['12483hdhd2838'], // optionnal
     'created_at': Date.now // automatic
 }
 ```
@@ -482,7 +482,7 @@ Allows the creation of a single Discussion group.
     admin:['12483hdhd2838'], // automatic when creating -> take the user token to find user in db
     group: 'skdjlkj5425424sdsqd',
     public: false,
-    users: [12483hdhd2838],
+    users: ['12483hdhd2838'],
     created_at: Date.now
 }
 ```
@@ -522,7 +522,7 @@ Show a single Discussion group by ID.
 
 ---
 #### [Update] update Discussion Group 
-Update a single event by ID.
+Update a single Discussion Group by ID.
 |User|Api|
 |---|---|
 |Require autenthification |Yes|
