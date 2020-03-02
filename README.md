@@ -379,8 +379,8 @@ Show a single group by ID.
 ```
 
 ---
-#### [Update] update event 
-Update a single event by ID.
+#### [Update] update group 
+Update a single group by ID.
 |User|Api|
 |---|---|
 |Require autenthification |Yes|
