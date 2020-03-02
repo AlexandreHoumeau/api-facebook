@@ -547,7 +547,7 @@ Update a single Discussion Group by ID.
     discussion/update/qskq554qsd6q5s4d6fd7gd
     token: 'Y9Y1lusRUNVfKnv75yFUXw4wpo1OwK0HYd0RSVEkaaNCvz6oLNTT49m2Mix9sFHLwxeYWPUsgXxdhQYS80MgEE9Sljuq9VctHvdm'
     
-Can't update ``Group`` or ``Event``
+⚠️ Can't update ``Group`` or ``Event``
 ```javascript
 {
     admin: '['sf4546sdf54654', 'sdf53s4d3546s4df3', 'dsf5s43df54sdf']'
