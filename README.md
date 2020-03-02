@@ -105,8 +105,8 @@ Update a single user by ID.
 - Header request: token: Valid user token
  
 #### Parameters
-user/update/12483hdhd2838
-token: 'Y9Y1lusRUNVfKnv75yFUXw4wpo1OwK0HYd0RSVEkaaNCvz6oLNTT49m2Mix9sFHLwxeYWPUsgXxdhQYS80MgEE9Sljuq9VctHvdm'
+    user/update/12483hdhd2838
+    token: 'Y9Y1lusRUNVfKnv75yFUXw4wpo1OwK0HYd0RSVEkaaNCvz6oLNTT49m2Mix9sFHLwxeYWPUsgXxdhQYS80MgEE9Sljuq9VctHvdm'
 ```javascript
 {
     'first_name': 'Bertrand',
