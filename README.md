@@ -1,4 +1,15 @@
 # Facebook-Api ⚡
+##### How to use it ? 
+    $ npm install
+Then you have to run mongod in another terminal
+
+    $ mongod
+
+Then start the app
+
+    $npm run start
+    
+You should also use ```postman``` for the request
 ## User api
 Crud API for all users
 #### [POST] Create user 
