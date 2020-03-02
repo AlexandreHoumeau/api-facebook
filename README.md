@@ -196,7 +196,7 @@ Allows the creation of a single event.
     'location': 'The Event place', // required
     'cover_photo': 'http://event-photo.jpeg', // required
     'public': false, // optionnal
-    'participants': 12483hdhd2838, // optionnal
+    'participants': '12483hdhd2838', // optionnal
     'created_at': Date.now // automatic
 }
 ```
@@ -211,7 +211,7 @@ Allows the creation of a single event.
     'cover_photo': 'http://event-photo.jpeg',
     'public': false, 
     'admin': '12483hdhd2838' // automatic when creating -> take the user token to find user in db
-    'participants': 12483hdhd2838, 
+    'participants': '12483hdhd2838', 
     'created_at': Date.now 
 }
 ```
@@ -241,7 +241,7 @@ Show a single event by ID.
     'cover_photo': 'http://event-photo.jpeg',
     'public': false, 
     'admin': '12483hdhd2838' 
-    'participants': 12483hdhd2838, 
+    'participants': '12483hdhd2838', 
     'created_at': Date.now 
 }
 ```
@@ -276,7 +276,7 @@ Update a single event by ID.
     'cover_photo': 'http://event-photo.jpeg',
     'public': false,
     'admin': ['12483hdhd2838', 'sf4546sdf54654', 'sdf53s4d3546s4df3', 'dsf5s43df54sdf'] 
-    'participants': 12483hdhd2838,
+    'participants': '12483hdhd2838',
     'created_at': Date.now 
 }
 ```
@@ -307,7 +307,7 @@ Delete a single event by ID.
     'cover_photo': 'http://event-photo.jpeg',
     'public': false,
     'admin': ['12483hdhd2838', 'sf4546sdf54654', 'sdf53s4d3546s4df3', 'dsf5s43df54sdf'] 
-    'participants': 12483hdhd2838,
+    'participants': '12483hdhd2838',
     'created_at': Date.now 
 }
 ```
