@@ -149,7 +149,7 @@ Delete a single user by ID.
 - Header request: token: Valid user token
  
 #### Parameters
-    user/show/12483hdhd2838
+    user/delete/12483hdhd2838
     token: 'Y9Y1lusRUNVfKnv75yFUXw4wpo1OwK0HYd0RSVEkaaNCvz6oLNTT49m2Mix9sFHLwxeYWPUsgXxdhQYS80MgEE9Sljuq9VctHvdm'
 
 #### Response
@@ -224,11 +224,11 @@ Show a single event by ID.
 |Who can use it |User only|
 |Response formats |Application/JSON|
 
-- HTTP request : GET -> user/event/:id
+- HTTP request : GET -> event/show/:id
 - Header request: token: Valid user token
  
 #### Parameters
-    user/event/kdjs65qkjd76shdg9
+    event/show/kdjs65qkjd76shdg9
     token: 'Y9Y1lusRUNVfKnv75yFUXw4wpo1OwK0HYd0RSVEkaaNCvz6oLNTT49m2Mix9sFHLwxeYWPUsgXxdhQYS80MgEE9Sljuq9VctHvdm'
 
 #### Response
@@ -255,7 +255,7 @@ Update a single event by ID.
 |Who can use it |User only|
 |Response formats |Application/JSON|
 
-- HTTP request : PUT -> user/update/:id
+- HTTP request : PUT -> event/update/:id
 - Header request: token: Valid user token
  
 #### Parameters
@@ -294,7 +294,7 @@ Delete a single event by ID.
 - Header request: token: Valid user token
  
 #### Parameters
-    event/show/kdjs65qkjd76shdg9
+    event/delete/kdjs65qkjd76shdg9
     token: 'Y9Y1lusRUNVfKnv75yFUXw4wpo1OwK0HYd0RSVEkaaNCvz6oLNTT49m2Mix9sFHLwxeYWPUsgXxdhQYS80MgEE9Sljuq9VctHvdm'
 
 #### Response
