@@ -330,7 +330,7 @@ Allows the creation of a single group.
     'description': 'Super Group', // optionnal
     'cover_photo': 'http://group-photo.jpeg', // optional
     'public': false, // optionnal
-    'member': 12483hdhd2838, // optionnal
+    'member': '12483hdhd2838', // optionnal
     'created_at': Date.now // automatic
 }
 ```
@@ -344,7 +344,7 @@ Allows the creation of a single group.
     'cover_photo': 'http://group-photo.jpeg',
     'public': false, 
     'admin': '12483hdhd2838' // automatic when creating -> take the user token to find user in db
-    'participants': 12483hdhd2838, 
+    'member': '12483hdhd2838', 
     'created_at': Date.now 
 }
 ```
@@ -373,7 +373,7 @@ Show a single group by ID.
     'cover_photo': 'http://group-photo.jpeg',
     'public': false, 
     'admin': '12483hdhd2838' // automatic when creating -> take the user token to find user in db
-    'participants': 12483hdhd2838, 
+    'member': '12483hdhd2838', 
     'created_at': Date.now 
 }
 ```
@@ -407,7 +407,7 @@ Update a single event by ID.
     'cover_photo': 'http://group-photo.jpeg',
     'public': false, 
     'admin': '['sf4546sdf54654', 'sdf53s4d3546s4df3', 'dsf5s43df54sdf']',
-    'participants': 12483hdhd2838, 
+    'member': '12483hdhd2838', 
     'created_at': Date.now 
 }
 ```
@@ -437,7 +437,7 @@ Delete a single group by ID.
     'cover_photo': 'http://group-photo.jpeg',
     'public': false, 
     'admin': '['sf4546sdf54654', 'sdf53s4d3546s4df3', 'dsf5s43df54sdf']',
-    'participants': 12483hdhd2838, 
+    'member': '12483hdhd2838', 
     'created_at': Date.now 
 }
 ```
