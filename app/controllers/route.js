@@ -21,7 +21,12 @@ const CreateDiscussion = require('./discussion_groups/create')
 const ShowDiscussion = require('./discussion_groups/show.js')
 const DeleteDiscussion = require('./discussion_groups/delete.js')
 const UpdateDiscussion = require('./discussion_groups/update.js')
-const CreateDiscussionMessage = require('./discussion_groups/createMessage')
+
+// Photo_albums
+const CreateAlbum = require('./photo_albums/create')
+const ShowAlbum = require('./photo_albums/show.js')
+const DeleteAlbum = require('./photo_albums/delete.js')
+const UpdateAlbum = require('./photo_albums/update.js')
 
 module.exports = {
   users: {
@@ -46,7 +51,12 @@ module.exports = {
     CreateDiscussion,
     ShowDiscussion,
     DeleteDiscussion,
-    UpdateDiscussion,
-    CreateDiscussionMessage
+    UpdateDiscussion
+  },
+  photo_albums: {
+    CreateAlbum,
+    ShowAlbum,
+    DeleteAlbum,
+    UpdateAlbum
   }
 }
