@@ -81,8 +81,12 @@ class Server {
     new routes.discussion_groups.ShowDiscussion(this.app, this.connect)
     new routes.discussion_groups.DeleteDiscussion(this.app, this.connect)
     new routes.discussion_groups.UpdateDiscussion(this.app, this.connect)
-    // new routes.discussion_groups.CreateDiscussionMessage(this.app, this.connect)
 
+    // Photo_album
+    new routes.photo_albums.CreateAlbum(this.app, this.connect)
+    new routes.photo_albums.ShowAlbum(this.app, this.connect)
+    new routes.photo_albums.DeleteAlbum(this.app, this.connect)
+    new routes.photo_albums.UpdateAlbum(this.app, this.connect)
     this.app.use((req, res) => {
       res.status(404).json({
         'code': 404,
