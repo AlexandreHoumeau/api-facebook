@@ -5,7 +5,8 @@ const ObjectId = Schema.ObjectId
 const AlbumSchema = new mongoose.Schema({
   event: {
     type: ObjectId,
-    required: true
+    required: true,
+    unique: true
   },
   albums: [{
     participant: ObjectId,
