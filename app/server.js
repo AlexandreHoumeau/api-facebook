@@ -100,6 +100,12 @@ class Server {
     new routes.tickets.DeleteTickets(this.app, this.connect)
     new routes.tickets.UpdateTickets(this.app, this.connect)
 
+    // Shopping_list
+    new routes.shopping_lists.CreateShopping(this.app, this.connect)
+    new routes.shopping_lists.ShowShopping(this.app, this.connect)
+    new routes.shopping_lists.DeleteShopping(this.app, this.connect)
+    new routes.shopping_lists.UpdateShopping(this.app, this.connect)
+
     this.app.use((req, res) => {
       res.status(404).json({
         'code': 404,
