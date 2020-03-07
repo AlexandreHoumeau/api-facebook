@@ -40,6 +40,12 @@ const ShowTickets = require('./ticketings/show.js')
 const DeleteTickets = require('./ticketings/delete.js')
 const UpdateTickets = require('./ticketings/update.js')
 
+// Photo_albums
+const CreateShopping = require('./shopping_lists/create')
+const ShowShopping = require('./shopping_lists/show.js')
+const DeleteShopping = require('./shopping_lists/delete.js')
+const UpdateShopping = require('./shopping_lists/update.js')
+
 module.exports = {
   users: {
     Create,
@@ -82,5 +88,11 @@ module.exports = {
     ShowTickets,
     DeleteTickets,
     UpdateTickets
+  },
+  shopping_lists: {
+    CreateShopping,
+    ShowShopping,
+    DeleteShopping,
+    UpdateShopping
   }
 }
