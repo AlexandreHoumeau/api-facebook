@@ -630,4 +630,195 @@ Delete a single discussion group by ID.
 }
 ```
 
+# Photo_album api 📷
+Crud API for all photo_album 
+#### [POST] Create photo_album
+Allows the creation of a single photo_album.
+|User|Api|
+|---|---|
+|Require autenthification |Yes|
+|Who can use it |User only|
+|Response formats |Application/JSON|
+
+- HTTP request : POST -> album/create
+#### Parameters
+    token: 'Y9Y1lusRUNVfKnv75yFUXw4wpo1OwK0HYd0RSVEkaaNCvz6oLNTT49m2Mix9sFHLwxeYWPUsgXxdhQYS80MgEE9Sljuq9VctHvdm'
+```javascript
+{
+    event: 'kdjs65qkjd76shdg9', // require
+    albums: [{
+        participant: '12483hdhd2838',
+        photo: ['http://image1.jpeg', 'http://image2.jpeg', 'http://image3.jpeg']
+        comments: [{
+            participant: '12483hdhd2839',
+            message: 'Great Photos bro !'
+        }]
+    }]
+}
+```
+
+#### Response
+``` javascript
+{
+    id: 'qd465sdf4654sqd',
+    event: 'kdjs65qkjd76shdg9',
+    albums: [{
+        participant: '12483hdhd2838',
+        photo: ['http://image1.jpeg', 'http://image2.jpeg', 'http://image3.jpeg'],
+        created_at: Date.now
+        comments: [{
+            participant: '12483hdhd2839',
+            message: 'Great Photos bro !',
+            created_at: Date.now
+        }]
+    }],
+    created_at: Date.now
+}
+```
+---
+#### [GET] Show Photo Album 
+Show a single photo album by ID.
+|User|Api|
+|---|---|
+|Require autenthification |Yes|
+|Who can use it |User only|
+|Response formats |Application/JSON|
+
+- HTTP request : GET -> album/show/:id
+- Header request: token: Valid user token
+ 
+#### Parameters
+    album/show/qd465sdf4654sqd
+    token: 'Y9Y1lusRUNVfKnv75yFUXw4wpo1OwK0HYd0RSVEkaaNCvz6oLNTT49m2Mix9sFHLwxeYWPUsgXxdhQYS80MgEE9Sljuq9VctHvdm'
+
+#### Response
+``` javascript
+{
+    id: 'qd465sdf4654sqd',
+    event: 'kdjs65qkjd76shdg9',
+    albums: [{
+        participant: '12483hdhd2838',
+        photo: ['http://image1.jpeg', 'http://image2.jpeg', 'http://image3.jpeg'],
+        created_at: Date.now
+        comments: [{
+            participant: '12483hdhd2839',
+            message: 'Great Photos bro !',
+            created_at: Date.now
+        }]
+    }],
+    created_at: Date.now
+}
+```
+
+---
+#### [Update] update Album Photo
+Update a single photo album by ID.
+|User|Api|
+|---|---|
+|Require autenthification |Yes|
+|Who can use it |User only|
+|Response formats |Application/JSON|
+
+- HTTP request : PUT -> album/update/:id
+- Header request: token: Valid user token
+ 
+#### Parameters
+    album/update/qd465sdf4654sqd
+    token: 'Y9Y1lusRUNVfKnv75yFUXw4wpo1OwK0HYd0RSVEkaaNCvz6oLNTT49m2Mix9sFHLwxeYWPUsgXxdhQYS80MgEE9Sljuq9VctHvdm'
+    
+⚠️ Can't update ``Event``
+```javascript
+{
+    albums: [{
+        participant: '12483hdhd25g8',
+        photo: ['http://image10.jpeg', 'http://image11.jpeg', 'http://image12.jpeg'],
+        created_at: Date.now
+        comments: [{
+            participant: '12483hs4d2839',
+            message: 'What a memorable time we had !!',
+        },{
+            participant: '12483hsld52839',
+            message: 'Yeah sure !',
+        }]
+    }],
+}
+```
+#### Response
+``` javascript
+{
+    id: 'qd465sdf4654sqd',
+    event: 'kdjs65qkjd76shdg9',
+    albums: [{
+        participant: '12483hdhd2838',
+        photo: ['http://image1.jpeg', 'http://image2.jpeg', 'http://image3.jpeg'],
+        created_at: Date.now
+        comments: [{
+            participant: '12483hdhd2839',
+            message: 'Great Photos bro !',
+            created_at: Date.now
+        },{
+        participant: '12483hdhd2838',
+        photo: ['http://image1.jpeg', 'http://image2.jpeg', 'http://image3.jpeg'],
+        created_at: Date.now
+        comments: [{
+            participant: '12483hdhd2839',
+            message: 'Great Photos bro !',
+            created_at: Date.now
+        },{
+            participant: '12483hsld52839',
+            message: 'Yeah sure !',
+            created_at: Date.now
+        }]
+    }],
+    created_at: Date.now
+}
+```
+
+---
+#### [Delete] Delete Photo Album
+Delete a single photo  album by ID.
+|User|Api|
+|---|---|
+|Require autenthification |Yes|
+|Who can use it |User only|
+|Response formats |Application/JSON|
+
+- HTTP request : DELETE -> album/delete/:id
+- Header request: token: Valid user token
+ 
+#### Parameters
+    album/delete/qd465sdf4654sqd
+    token: 'Y9Y1lusRUNVfKnv75yFUXw4wpo1OwK0HYd0RSVEkaaNCvz6oLNTT49m2Mix9sFHLwxeYWPUsgXxdhQYS80MgEE9Sljuq9VctHvdm'
+
+#### Response
+``` javascript
+{
+    id: 'qd465sdf4654sqd',
+    event: 'kdjs65qkjd76shdg9',
+    albums: [{
+        participant: '12483hdhd2838',
+        photo: ['http://image1.jpeg', 'http://image2.jpeg', 'http://image3.jpeg'],
+        created_at: Date.now
+        comments: [{
+            participant: '12483hdhd2839',
+            message: 'Great Photos bro !',
+            created_at: Date.now
+        },{
+        participant: '12483hdhd2838',
+        photo: ['http://image1.jpeg', 'http://image2.jpeg', 'http://image3.jpeg'],
+        created_at: Date.now
+        comments: [{
+            participant: '12483hdhd2839',
+            message: 'Great Photos bro !',
+            created_at: Date.now
+        },{
+            participant: '12483hsld52839',
+            message: 'Yeah sure !',
+            created_at: Date.now
+        }]
+    }],
+    created_at: Date.now
+}
+```
+
 
