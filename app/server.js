@@ -87,6 +87,19 @@ class Server {
     new routes.photo_albums.ShowAlbum(this.app, this.connect)
     new routes.photo_albums.DeleteAlbum(this.app, this.connect)
     new routes.photo_albums.UpdateAlbum(this.app, this.connect)
+
+    // Survey
+    new routes.survey.CreateSurvey(this.app, this.connect)
+    new routes.survey.ShowSurvey(this.app, this.connect)
+    new routes.survey.DeleteSurvey(this.app, this.connect)
+    new routes.survey.UpdateSurvey(this.app, this.connect)
+
+    // Tickets
+    new routes.tickets.CreateTickets(this.app, this.connect)
+    new routes.tickets.ShowTickets(this.app, this.connect)
+    new routes.tickets.DeleteTickets(this.app, this.connect)
+    new routes.tickets.UpdateTickets(this.app, this.connect)
+
     this.app.use((req, res) => {
       res.status(404).json({
         'code': 404,

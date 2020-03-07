@@ -28,6 +28,18 @@ const ShowAlbum = require('./photo_albums/show.js')
 const DeleteAlbum = require('./photo_albums/delete.js')
 const UpdateAlbum = require('./photo_albums/update.js')
 
+// Survey
+const CreateSurvey = require('./surveys/create')
+const ShowSurvey = require('./surveys/show.js')
+const DeleteSurvey = require('./surveys/delete.js')
+const UpdateSurvey = require('./surveys/update.js')
+
+// Photo_albums
+const CreateTickets = require('./ticketings/create')
+const ShowTickets = require('./ticketings/show.js')
+const DeleteTickets = require('./ticketings/delete.js')
+const UpdateTickets = require('./ticketings/update.js')
+
 module.exports = {
   users: {
     Create,
@@ -58,5 +70,17 @@ module.exports = {
     ShowAlbum,
     DeleteAlbum,
     UpdateAlbum
+  },
+  survey: {
+    CreateSurvey,
+    ShowSurvey,
+    DeleteSurvey,
+    UpdateSurvey
+  },
+  tickets: {
+    CreateTickets,
+    ShowTickets,
+    DeleteTickets,
+    UpdateTickets
   }
 }
