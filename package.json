@@ -6,7 +6,7 @@
   "scripts": {
     "build": "yarn install && eslint ./app/* index.js && yarn start",
     "start": "eslint ./app/* index.js && node index.js",
-    "test": "mocha",
+    "test": "mocha --exit",
     "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
     "lint": "eslint ./app/* index.js"
   },

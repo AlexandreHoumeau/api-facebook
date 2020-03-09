@@ -27,7 +27,9 @@ describe('Server', () => {
   })
 })
 
+// USERS TEST
 describe('/users', function() {
+
   let userCreate
   it('users/creates status should be 404', (done) => {
     const result = '{"code":404,"message":"Not Found"}'
@@ -69,6 +71,7 @@ describe('/users', function() {
         done() 
       })
       .catch((err) => {
+        done(err)
         throw err;
       })
   })
