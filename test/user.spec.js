@@ -89,7 +89,36 @@ describe('/users', function() {
     })
   })
 
-  it('users/delete should get a sepecific user by id', (done) => {
+  it('users/update should update a sepecific user by id', (done) => {
+
+    const req = {
+      'first_name': 'Alexandre',
+      'last_name': 'Houmeau'
+    }
+    const rep = {
+      'first_name': 'Alexandre',
+      'last_name': 'Houmeau',
+      'token': userCreate.token,
+      'id': userCreate.id,
+      'email': userCreate.email,
+      'password': userCreate.password
+    }
+    chai
+      .request(app)
+      .put(`/user/update/${userCreate.id}`)
+      .set('token', `${userCreate.token}`)
+      .send(req)
+      .end((err, res) => {
+        res.should.have.status(200)
+
+        const response = res.body
+        userCreate = Object.assign({},response)
+        response.should.be.eql(rep)
+        done()
+    })
+  })
+
+  it('users/delete should delete a sepecific user by id', (done) => {
     chai
       .request(app)
       .delete(`/user/delete/${userCreate.id}`)
